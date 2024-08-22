@@ -1,9 +1,16 @@
 @import 'modern-normalize';
 @import './header.scss';
+@import './hero.scss';
+@import './benefits.scss';
+@import './about.scss';
+@import './play.scss';
+@import './gallery.scss';
+@import './advantages.scss';
+@import './faq.scss';
 @import './footer.scss';
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
