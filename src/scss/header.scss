@@ -78,6 +78,10 @@
   left: 50%;
   transform: translateX(-50%);
   display: none;
+  z-index: 10;
+}
+
+.menu-icon {
 }
 
 .context-img {
@@ -91,6 +95,11 @@
   top: 8px;
   right: 8px;
   color: #000;
+}
+
+.close-icon {
+  fill: #000;
+  stroke: #000;
 }
 
 .context-nav {
