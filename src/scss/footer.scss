@@ -10,8 +10,10 @@
 }
 
 .footer-wrapper {
-  padding-right: 110px;
-  padding-left: 110px;
+  @include media(desktop) {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
 }
 
 .footer-nav {

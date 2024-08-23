@@ -7,19 +7,38 @@
 }
 
 .privacy-title {
+  position: relative;
+  width: 225px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: 'Permanent Marker', sans-serif;
   font-weight: 400;
   font-size: 32px;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-skip-ink: none;
   text-align: center;
   color: #fff;
   margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
 
   @include media(desktop) {
+    width: 497px;
+    -webkit-text-stroke-width: 2px;
     font-size: 70px;
     margin-bottom: 64px;
   }
+}
+
+.privacy-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  background-color: $_white_text_color;
+  border: 2px solid $_black_text_color;
 }
 
 .privacy-text {
@@ -43,13 +62,16 @@
 
 .marketing-title {
   font-family: 'Merriweather', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 28px;
   text-align: center;
   color: #fff;
   margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
 
   @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
     font-size: 50px;
     margin-bottom: 64px;
   }
@@ -81,8 +103,11 @@
   text-align: center;
   color: #fff;
   margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
 
   @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
     font-size: 50px;
     margin-bottom: 64px;
   }
@@ -149,8 +174,11 @@
   text-align: center;
   color: #fff;
   margin-bottom: 32px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
 
   @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
     font-size: 50px;
     margin-bottom: 64px;
   }
