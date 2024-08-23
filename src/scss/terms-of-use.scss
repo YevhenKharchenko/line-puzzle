@@ -3,8 +3,6 @@
 }
 
 .page-title {
-  leading-trim: both;
-  text-edge: cap;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: $_black_text_color;
   font-family: 'Permanent Marker', sans-serif;
@@ -62,8 +60,6 @@
 .section-title {
   color: $_white_text_color;
   text-align: center;
-  leading-trim: both;
-  text-edge: cap;
   -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: $_black_text_color;
   font-size: 28px;
@@ -87,90 +83,23 @@
   }
 }
 
-.terms-footer {
-  padding-block: 64px;
+.bg-img-paws-right {
+  background-image: image-set(
+    url('../img/terms/paws-to-right-1x.png') 1x,
+    url('../img/terms/paws-to-right-2x.png') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 78%;
 
   @include media(desktop) {
-    padding-block: 80px;
+    background-image: image-set(
+      url('../img/terms/paws-to-left-desk-1x.png') 1x,
+      url('../img/terms/paws-to-left-desk-2x.png') 2x
+    );
+    background-position: 88% 66%;
   }
 }
-
-.footer-policy-terms {
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 18px;
-  font-weight: 400;
-
-  @include media(desktop) {
-    text-align: start;
-    font-size: 24px;
-  }
-
-  a {
-    display: block;
-    text-decoration-line: underline;
-
-    @include media(desktop) {
-      display: inline;
-    }
-  }
-}
-
-.footer-text-separator {
-  display: none;
-
-  @include media(desktop) {
-    display: inline-block;
-  }
-}
-
-.terms-footer p {
-  margin-top: 27px;
-  color: $_black_text_color;
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-size: 12px;
-
-  @include media(desktop) {
-    font-size: 20px;
-    margin-top: 50px;
-  }
-}
-
-// .bg-img-paws-left {
-//   background-image: image-set(
-//     url('../img/terms/paws-to-left-1x.png') 1x,
-//     url('../img/terms/paws-to-left-2x.png') 2x
-//   );
-//   background-repeat: no-repeat;
-//   background-size: auto;
-//   background-position: 50% 14%;
-
-//   @include media(desktop) {
-//     background-image: image-set(
-//       url('../img/terms/paws-to-right-desk-1x.png') 1x,
-//       url('../img/terms/paws-to-right-desk-2x.png') 2x
-//     );
-
-//     // background-position: 50% 14%;
-//   }
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-image: inherit;
-//     background-repeat: inherit;
-//     background-size: inherit;
-//     background-position: inherit;
-//     filter: blur(9px);
-//     z-index: -1;
-//   }
-// }
 
 .bg-img-paws-left {
   background-image: image-set(
@@ -179,31 +108,13 @@
   );
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: 50% 14%;
+  background-position: 50% 42%;
 
   @include media(desktop) {
     background-image: image-set(
       url('../img/terms/paws-to-right-desk-1x.png') 1x,
       url('../img/terms/paws-to-right-desk-2x.png') 2x
     );
-    background-position: 0% -14%;
-  }
-}
-
-.bg-img-paws-right {
-  background-image: image-set(
-    url('../img/terms/paws-to-right-1x.png') 1x,
-    url('../img/terms/paws-to-right-2x.png') 2x
-  );
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 50% -12%;
-
-  @include media(desktop) {
-    background-image: image-set(
-      url('../img/terms/paws-to-left-desk-1x.png') 1x,
-      url('../img/terms/paws-to-left-desk-2x.png') 2x
-    );
-    background-position: 153% 144%;
+    background-position: 13% 91%;
   }
 }
