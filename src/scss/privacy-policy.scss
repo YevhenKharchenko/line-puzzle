@@ -1,0 +1,168 @@
+.privacy-section {
+  padding-top: 80px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+}
+
+.privacy-title {
+  font-family: 'Permanent Marker', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 70px;
+    margin-bottom: 64px;
+  }
+}
+
+.privacy-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 20px;
+  }
+}
+
+.marketing-section {
+  padding-top: 40px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+}
+
+.marketing-title {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.marketing-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 20px;
+  }
+}
+
+.data-section {
+  padding-top: 40px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+}
+
+.data-title {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.data-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 20px;
+    margin-bottom: 64px;
+  }
+}
+
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style-type: disc;
+  padding-left: 24px;
+
+  @include media(desktop) {
+    gap: 38px;
+    padding-left: 36px;
+  }
+}
+
+.data-list-item {
+}
+
+.data-item-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 26px;
+  }
+}
+
+.data-span {
+  font-weight: 700;
+}
+
+.changes-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.changes-title {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.changes-text {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+
+  @include media(desktop) {
+    font-size: 20px;
+  }
+}

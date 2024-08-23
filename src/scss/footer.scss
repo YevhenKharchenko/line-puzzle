@@ -2,14 +2,33 @@
   background-color: #9e083e;
   padding-top: 65px;
   padding-bottom: 65px;
+
+  @include media(desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.footer-wrapper {
+  padding-right: 110px;
+  padding-left: 110px;
 }
 
 .footer-nav {
   text-align: center;
   margin-bottom: 30px;
+
+  @include media(desktop) {
+  }
 }
 
 .footer-list {
+  display: flex;
+  flex-direction: column;
+
+  @include media(desktop) {
+    flex-direction: row;
+  }
 }
 
 .footer-list-item {
@@ -23,6 +42,15 @@
   text-decoration-skip-ink: none;
   text-align: center;
   color: #fff;
+}
+
+.footer-span {
+  display: none;
+  text-decoration: none;
+
+  @include media(desktop) {
+    display: inline;
+  }
 }
 
 .footer-text {
