@@ -1,0 +1,8 @@
+.about-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include media(desktop) {
+    padding-bottom: 41px;
+  }
+}

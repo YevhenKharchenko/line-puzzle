@@ -43,3 +43,18 @@ html {
     padding-left: 182px;
   }
 }
+
+.section-title {
+  font-family: 'Permanent Marker', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+
+  @include media(desktop) {
+    font-size: 70px;
+    -webkit-text-stroke-width: 2px;
+  }
+}
