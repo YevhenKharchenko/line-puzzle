@@ -1,13 +1,17 @@
 :root {
   font-family: 'Merriweather', sans-serif;
   color: $_white_text_color;
-  background: $_bg_desktop_color;
+  background: $_bg_mobile_color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  @include media(desktop) {
+    background: $_bg_desktop_color;
+  }
 }
 
 html {
@@ -49,7 +53,7 @@ html {
   font-weight: 400;
   font-size: 32px;
   text-align: center;
-  color: #fff;
+  color: $_white_text_color;
   -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: $_black_text_color;
 

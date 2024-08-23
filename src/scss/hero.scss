@@ -1,9 +1,110 @@
 .hero-section {
   padding-top: 24px;
-  padding-bottom: 102px;
+  padding-bottom: 24px;
 
   @include media(desktop) {
-    padding-top: 112px;
-    padding-bottom: 80px;
+    padding-top: 108px;
+    padding-bottom: 74px;
+  }
+}
+
+.hero-content-wrapper {
+  .hero-img {
+    display: none;
+
+    @include media(desktop) {
+      display: block;
+    }
+  }
+
+  @include media(desktop) {
+    display: flex;
+    gap: 252px;
+  }
+}
+
+.content-item {
+  @include media(desktop) {
+    padding-left: 110px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+
+    @include media(desktop) {
+      font-size: 70px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.hero-text {
+  margin-bottom: 24px;
+  line-height: normal;
+
+  @include media(desktop) {
+    font-size: 25px;
+    width: 416px;
+    margin-bottom: 40px;
+  }
+}
+
+.underline-text {
+  @include media(desktop) {
+    font-weight: 700;
+    text-decoration-line: underline;
+  }
+}
+
+.line-puzzle-img {
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+.gplay-btn {
+  display: flex;
+  height: 83px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 15px;
+  border: 2px solid $_black_text_color;
+  background-color: $_pink_color;
+  width: 280px;
+}
+
+.gplay-text {
+  color: $_black_text_color;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.gplay-text-botom {
+  font-size: 35px;
+  letter-spacing: -0.03em;
+}
+
+.bg-puzzles {
+  background-image: url('../img/hero/puzzle_piece.webp'),
+    url('../img/hero/puzzle_piece1.webp');
+  background-position: 16% 53%, 89% 7%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 117px 117px, 96px 96px;
+
+  @include media(desktop) {
+    background-image: url('../img/hero/puzzle_piece11.webp'),
+      url('../img/hero/puzzle_piece12.webp'),
+      url('../img/hero/puzzle_piece13.webp'),
+      url('../img/hero/puzzle_piece14.webp');
+    background-position: 8% 20%, 43% 50%, 55% 99%, 92% 0%;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 414px 414px, 219px 219px, 306px 306px, 416px 340px;
   }
 }
