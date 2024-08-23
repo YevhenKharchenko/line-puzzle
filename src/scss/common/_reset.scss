@@ -11,6 +11,8 @@ html {
 }
 
 body {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -37,6 +39,11 @@ a {
 }
 
 button {
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  background: none;
   cursor: pointer;
 }
 
