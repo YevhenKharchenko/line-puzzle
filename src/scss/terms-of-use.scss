@@ -1,0 +1,209 @@
+.page-title-wrapper {
+  text-align: center;
+}
+
+.page-title {
+  leading-trim: both;
+  text-edge: cap;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $_black_text_color;
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 32px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 94px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+    font-size: 70px;
+  }
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  background-color: $_white_text_color;
+  border: 2px solid $_black_text_color;
+}
+
+.terms-section {
+  padding-top: 40px;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+
+  p {
+    margin-bottom: 32px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include media(desktop) {
+      font-size: 20px;
+    }
+  }
+}
+
+.section-title {
+  color: $_white_text_color;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: $_black_text_color;
+  font-size: 28px;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    -webkit-text-stroke-width: 2px;
+    font-size: 50px;
+    margin-bottom: 64px;
+  }
+}
+
+.greeting {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+
+  @include media(desktop) {
+    font-size: 26px;
+  }
+}
+
+.terms-footer {
+  padding-block: 64px;
+
+  @include media(desktop) {
+    padding-block: 80px;
+  }
+}
+
+.footer-policy-terms {
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 18px;
+  font-weight: 400;
+
+  @include media(desktop) {
+    text-align: start;
+    font-size: 24px;
+  }
+
+  a {
+    display: block;
+    text-decoration-line: underline;
+
+    @include media(desktop) {
+      display: inline;
+    }
+  }
+}
+
+.footer-text-separator {
+  display: none;
+
+  @include media(desktop) {
+    display: inline-block;
+  }
+}
+
+.terms-footer p {
+  margin-top: 27px;
+  color: $_black_text_color;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 12px;
+
+  @include media(desktop) {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+}
+
+// .bg-img-paws-left {
+//   background-image: image-set(
+//     url('../img/terms/paws-to-left-1x.png') 1x,
+//     url('../img/terms/paws-to-left-2x.png') 2x
+//   );
+//   background-repeat: no-repeat;
+//   background-size: auto;
+//   background-position: 50% 14%;
+
+//   @include media(desktop) {
+//     background-image: image-set(
+//       url('../img/terms/paws-to-right-desk-1x.png') 1x,
+//       url('../img/terms/paws-to-right-desk-2x.png') 2x
+//     );
+
+//     // background-position: 50% 14%;
+//   }
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-image: inherit;
+//     background-repeat: inherit;
+//     background-size: inherit;
+//     background-position: inherit;
+//     filter: blur(9px);
+//     z-index: -1;
+//   }
+// }
+
+.bg-img-paws-left {
+  background-image: image-set(
+    url('../img/terms/paws-to-left-1x.png') 1x,
+    url('../img/terms/paws-to-left-2x.png') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% 14%;
+
+  @include media(desktop) {
+    background-image: image-set(
+      url('../img/terms/paws-to-right-desk-1x.png') 1x,
+      url('../img/terms/paws-to-right-desk-2x.png') 2x
+    );
+    background-position: 0% -14%;
+  }
+}
+
+.bg-img-paws-right {
+  background-image: image-set(
+    url('../img/terms/paws-to-right-1x.png') 1x,
+    url('../img/terms/paws-to-right-2x.png') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50% -12%;
+
+  @include media(desktop) {
+    background-image: image-set(
+      url('../img/terms/paws-to-left-desk-1x.png') 1x,
+      url('../img/terms/paws-to-left-desk-2x.png') 2x
+    );
+    background-position: 153% 144%;
+  }
+}
