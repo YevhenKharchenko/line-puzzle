@@ -9,6 +9,11 @@
   justify-content: center;
   align-items: center;
   gap: 24px;
+  margin-top: 24px;
+
+  @include media(desktop) {
+    margin-top: 64px;
+  }
 }
 
 .faq-list-item {
