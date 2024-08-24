@@ -2,3 +2,65 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
+.benefits-wrapper {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 48px 16px;
+  flex-wrap: wrap;
+
+  @include media(desktop) {
+    margin-top: 64px;
+    align-items: center;
+    gap: 24px;
+  }
+}
+.benefits-item {
+  color: $_black_text_color;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.benefits-title {
+  @include media(desktop) {
+    font-size: 30px;
+  }
+}
+.benefit-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 22px 23px 23px 22px;
+  border: 2px solid $_black_text_color;
+  border-radius: 32px;
+
+  @include media(desktop) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    height: 312px;
+    width: 306px;
+    padding: 30px 21px;
+    border: 5px solid $_black_text_color;
+    border-radius: 32px;
+  }
+}
+
+.benefits-description {
+  font-size: 18px;
+
+  @include media(desktop) {
+    font-size: 30px;
+  }
+}
