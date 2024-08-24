@@ -67,7 +67,6 @@
 .gplay-btn {
   display: flex;
   height: 83px;
-  padding: 16px 24px;
   justify-content: center;
   align-items: center;
   gap: 16px;
@@ -75,20 +74,28 @@
   border: 2px solid $_black_text_color;
   background-color: $_pink_color;
   width: 280px;
+  height: 83px;
 }
 
 .gplay-text {
   color: $_black_text_color;
   font-family: Roboto;
-  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
+  font-weight: 500;
+}
+
+.gplay-text-top {
+  font-size: 20px;
 }
 
 .gplay-text-botom {
   font-size: 35px;
   letter-spacing: -0.03em;
+
+  @include media(desktop) {
+    font-size: 37px;
+  }
 }
 
 .bg-puzzles {
