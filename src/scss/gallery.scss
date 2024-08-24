@@ -1,10 +1,12 @@
 .gallery-section {
   padding-top: 80px;
   padding-bottom: 80px;
+}
 
+.gallery-container {
   background-image: url(../img/gallery/paw-mob.png);
   background-repeat: no-repeat;
-  background-position: top 112px left 16px;
+  background-position: top 32px left 16px;
   background-size: 29px 27px;
 
   @media (min-resolution: 192dpi) {
@@ -13,7 +15,7 @@
 
   @include media(desktop) {
     background-image: url(../img/gallery/paw.png);
-    background-position: top 142px left 123px;
+    background-position: top 62px left 102px;
     background-size: 136px 117px;
 
     @media (min-resolution: 192dpi) {

@@ -78,13 +78,13 @@
   transform: translateX(-50%);
   display: none;
   z-index: 10;
-  background-image: url(./img/header/paws.png);
+  background-image: url(../img/header/paws.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 280px 206px;
 
   @media (min-resolution: 192dpi) {
-    background-image: url(./img/header/paws-2x.png);
+    background-image: url(../img/header/paws-2x.png);
   }
 }
 

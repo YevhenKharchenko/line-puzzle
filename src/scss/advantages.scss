@@ -1,11 +1,13 @@
 .advantages-section {
   padding-top: 80px;
   padding-bottom: 80px;
+}
 
+.advantages-container {
   @include media(desktop) {
     background-image: url(../img/advantages/paws.png);
     background-repeat: no-repeat;
-    background-position: top 530px right 370px;
+    background-position: top 450px right 150px;
     background-size: 153px 149px;
 
     @media (min-resolution: 192dpi) {
