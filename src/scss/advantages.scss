@@ -1,6 +1,17 @@
 .advantages-section {
   padding-top: 80px;
   padding-bottom: 80px;
+
+  @include media(desktop) {
+    background-image: url(../img/advantages/paws.png);
+    background-repeat: no-repeat;
+    background-position: top 530px right 370px;
+    background-size: 153px 149px;
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../img/advantages/paws-2x.png);
+    }
+  }
 }
 
 .advantages-list {
