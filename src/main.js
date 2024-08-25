@@ -14,6 +14,16 @@ function onCloseContextButtonClick() {
   contextMenu.classList.remove('is-open');
 }
 
+document
+  .getElementsByClassName('context-menu-backdrop')[0]
+  .addEventListener('click', onContextMenuLinkClick);
+
+function onContextMenuLinkClick(e) {
+  if (e.target.nodeName === 'A') {
+    contextMenu.classList.remove('is-open');
+  }
+}
+
 let currentIndex = 0;
 const items = document.querySelectorAll('.gallery-item');
 const dots = document.querySelectorAll('.dot');
