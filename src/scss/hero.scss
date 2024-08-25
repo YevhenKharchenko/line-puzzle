@@ -75,6 +75,13 @@
   background-color: $_pink_color;
   width: 280px;
   height: 83px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gplay-btn:hover {
+  background-color: $_white_text_color;
+  border-color: $_white_text_color;
 }
 
 .gplay-text {
