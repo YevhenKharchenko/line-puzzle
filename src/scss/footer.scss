@@ -27,9 +27,11 @@
 .footer-list {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 
   @include media(desktop) {
     flex-direction: row;
+    gap: 0;
   }
 }
 
