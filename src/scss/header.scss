@@ -3,8 +3,10 @@
   padding-bottom: 8px;
   position: sticky;
   top: 0;
-  background-color: #a10b41;
+  // background-color: #a10b41;
   z-index: 10;
+  background-color: rgba(161, 11, 65, 0.7);
+  backdrop-filter: blur(10px);
 
   @include media(desktop) {
     padding-top: 22px;
