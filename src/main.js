@@ -15,7 +15,7 @@ function onCloseContextButtonClick() {
 }
 
 document
-  .getElementsByClassName('context-menu-backdrop')[0]
+  .querySelector('.context-menu-backdrop')
   .addEventListener('click', onContextMenuLinkClick);
 
 function onContextMenuLinkClick(e) {

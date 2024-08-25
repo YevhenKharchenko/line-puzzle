@@ -144,14 +144,42 @@
 .context-menu-btn {
   display: flex;
   width: 132px;
-  height: 138px;
+  height: 42px;
   position: absolute;
-  bottom: -162px;
+  bottom: -62px;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #000;
+  border: 2px solid #fac6d9;
+  border-radius: 10px;
+  padding: 8px 19.4px;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
-.context-menu-btn-img {
+.menu-btn-text-wrapper {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-btn-top-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  color: #fac6d9;
+}
+
+.menu-btn-bottom-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.03em;
+  color: #fac6d9;
+  width: 61px;
 }
 
 .is-open {
