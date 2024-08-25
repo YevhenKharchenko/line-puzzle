@@ -1,6 +1,10 @@
 .benefits-section {
   padding-top: 80px;
   padding-bottom: 80px;
+
+  @include media(desktop) {
+    scroll-margin-top: 70px;
+  }
 }
 
 .benefits-wrapper {
