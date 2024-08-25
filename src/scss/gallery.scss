@@ -25,23 +25,28 @@
 }
 
 .carousel-container {
+  position: relative;
+  overflow: hidden;
   margin-top: 20px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include media(desktop) {
     margin-top: 75px;
+    width: 1076px;
   }
 }
 
 .gallery-carousel {
-  position: relative;
-  overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .gallery-item {
-  display: none;
+  flex: 0 0 100%;
+  display: flex;
   background-color: #fff;
   justify-content: center;
   align-items: center;
@@ -85,6 +90,14 @@
   }
 }
 
+.arrow-btn {
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.2);
+}
+
 .arrow-icon {
   @include media(desktop) {
     width: 86px;
@@ -106,8 +119,7 @@
 .dot {
   width: 19px;
   height: 18px;
-  transition: transform 0.3s, background-color 0.3s, width 0.3s, height 0.3s;
-  // cursor: pointer;
+  transition: transform 0.5s, background-color 0.5s, width 0.5s, height 0.5s;
   border-radius: 100%;
   background-color: #f593bc;
 

@@ -57,6 +57,14 @@
   }
 }
 
+.play-arrow-btn {
+  transition: transform 0.3s ease-in-out;
+}
+
+.play-arrow-btn:hover {
+  transform: scale(1.2);
+}
+
 .play-arrow-icon {
 }
 
@@ -189,10 +197,4 @@
 .play-item-desktop-5.animate-right,
 .play-item-desktop-6.animate-right {
   animation: slideInRightDesktop 1s forwards;
-}
-
-@media (min-width: 1024px) {
-  .play-item {
-    display: none;
-  }
 }

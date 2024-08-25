@@ -32,6 +32,7 @@ function onContextMenuLinkClick(e) {
 let currentIndex = 0;
 const items = document.querySelectorAll('.gallery-item');
 const dots = document.querySelectorAll('.dot');
+const carousel = document.querySelector('.gallery-carousel');
 
 document.getElementById('leftArrow').addEventListener('click', () => {
   changeItem(-1);
@@ -42,17 +43,15 @@ document.getElementById('rightArrow').addEventListener('click', () => {
 });
 
 function changeItem(direction) {
-  items[currentIndex].classList.remove('active');
-  dots[currentIndex].classList.remove('active');
-
   currentIndex = (currentIndex + direction + items.length) % items.length;
 
-  items[currentIndex].classList.add('active');
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  dots.forEach(dot => dot.classList.remove('active'));
   dots[currentIndex].classList.add('active');
 }
 
 function initCarousel() {
-  items[currentIndex].classList.add('active');
   dots[currentIndex].classList.add('active');
 }
 
