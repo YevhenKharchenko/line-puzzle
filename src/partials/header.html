@@ -50,56 +50,86 @@
           <a class="nav-list-link" href="./index.html#faq">FAQ</a>
         </li>
       </ul>
-      <button class="nav-btn">
+      <button class="nav-btn" type="button" aria-label="Open mobile menu">
         <svg class="menu-icon" width="34" height="34">
           <use href="./img/icons/sprite.svg#icon-menu"></use>
         </svg>
       </button>
     </nav>
   </div>
-  <div class="context-menu">
-    <a href="./index.html">
-      <img
-        class="context-img"
-        src="./img/header/logo.png"
-        alt="Logo"
-        width="44"
-        height="44"
-      />
-    </a>
-    <button class="close-btn">
-      <svg class="close-icon" width="40" height="40">
-        <use href="./img/icons/sprite.svg#icon-close"></use>
-      </svg>
-    </button>
-    <nav class="context-nav">
-      <ul class="context-nav-list">
-        <li class="context-list-item">
-          <a class="context-list-link" href="./index.html">Home</a>
-        </li>
-        <li class="context-list-item">
-          <a class="context-list-link" href="./index.html#benefits">Benefits</a>
-        </li>
-        <li class="context-list-item">
-          <a class="context-list-link" href="./index.html#about"
-            >About the Game</a
-          >
-        </li>
-        <li class="context-list-item">
-          <a class="context-list-link" href="./index.html#play">How to Play</a>
-        </li>
-        <li class="context-list-item">
-          <a class="context-list-link" href="./index.html#gallery">Gallery</a>
-        </li>
-        <li class="context-list-item">
-          <a class="context-list-link" href="./index.html#advantages"
-            >Advantages</a
-          >
-        </li>
-        <li class="context-list-item">
-          <a class="context-list-link" href="./index.html#faq">FAQ</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="context-menu-backdrop">
+    <div class="context-menu">
+      <a href="./index.html">
+        <img
+          class="context-img"
+          src="./img/header/logo.png"
+          alt="Logo"
+          width="44"
+          height="44"
+        />
+      </a>
+      <button class="close-btn" type="button" aria-label="Close mobile menu">
+        <svg class="close-icon" width="40" height="40">
+          <use href="./img/icons/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="context-nav">
+        <ul class="context-nav-list">
+          <li class="context-list-item">
+            <a class="context-list-link" href="./index.html">Home</a>
+          </li>
+          <li class="context-list-item">
+            <a class="context-list-link" href="./index.html#benefits"
+              >Benefits</a
+            >
+          </li>
+          <li class="context-list-item">
+            <a class="context-list-link" href="./index.html#about"
+              >About the Game</a
+            >
+          </li>
+          <li class="context-list-item">
+            <a class="context-list-link" href="./index.html#play"
+              >How to Play</a
+            >
+          </li>
+          <li class="context-list-item">
+            <a class="context-list-link" href="./index.html#gallery">Gallery</a>
+          </li>
+          <li class="context-list-item">
+            <a class="context-list-link" href="./index.html#advantages"
+              >Advantages</a
+            >
+          </li>
+          <li class="context-list-item">
+            <a class="context-list-link" href="./index.html#faq">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        class="context-menu-btn"
+        href="https://play.google.com/store/apps/details?id=brain.sage.line.puzzle"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Download the game Brain Sage Champion on Google Play"
+        aria-label="Download the game Brain Sage Champion on Google Play"
+      >
+        <picture class="context-menu-btn-img">
+          <source
+            srcset="./img/header/button.png 1x, ./img/header/button-2x.png 2x"
+            media="(min-width: 320px)"
+            width="132"
+            height="38"
+          />
+          <img
+            class="context-menu-btn-img"
+            src="./img/header/button.png"
+            alt="Puzzle"
+            width="132"
+            height="38"
+          />
+        </picture>
+      </a>
+    </div>
   </div>
 </header>

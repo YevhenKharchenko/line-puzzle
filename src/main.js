@@ -1,4 +1,4 @@
-const contextMenu = document.querySelector('.context-menu');
+const contextMenu = document.querySelector('.context-menu-backdrop');
 const menuBtn = document.querySelector('.nav-btn');
 const closeContextBtn = document.querySelector('.close-btn');
 
