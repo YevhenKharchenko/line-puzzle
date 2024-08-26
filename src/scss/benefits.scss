@@ -42,9 +42,6 @@
   align-self: stretch;
   margin-top: 12px;
   margin-bottom: 12px;
-  padding: 22px 23px 23px 22px;
-  border: 2px solid $_black_text_color;
-  border-radius: 32px;
 
   @include media(desktop) {
     flex-direction: column;
@@ -55,9 +52,6 @@
     margin-bottom: 32px;
     height: 312px;
     width: 306px;
-    padding: 30px 21px;
-    border: 5px solid $_black_text_color;
-    border-radius: 32px;
   }
 }
 
