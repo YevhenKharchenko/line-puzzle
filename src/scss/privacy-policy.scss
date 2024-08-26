@@ -1,5 +1,25 @@
 .privacy-body {
-  background-color: #aa194e;
+  background: linear-gradient(
+    180deg,
+    #9d073d 0%,
+    #d4346d 16%,
+    #bd2058 33%,
+    #c22a61 48%,
+    #bd2058 56%,
+    #ad134a 79%,
+    #bd2058 91%,
+    #9d073d 100%
+  );
+
+  @include media(desktop) {
+    background: linear-gradient(
+      180deg,
+      #9d073d 0%,
+      #ab194e 25%,
+      #ab194e 60%,
+      #9d073d 100%
+    );
+  }
 }
 
 .privacy-section {
