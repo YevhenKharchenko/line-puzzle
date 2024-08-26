@@ -97,7 +97,6 @@
 
 .faq-open {
   height: 120px;
-  border-color: #fff;
 
   @include media(desktop) {
     height: 104px;
@@ -121,15 +120,12 @@
 .faq-icon {
   // stroke: #000;
   fill: #000;
-  transition: fill 0.3s ease-in-out;
 }
 
 .faq-top-text:hover {
-  color: #fff;
 }
 
 .faq-top-text:hover .faq-icon {
-  fill: #fff;
 }
 
 .faq-list-item.faq-open .faq-toggle-symbol {
