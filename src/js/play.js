@@ -28,3 +28,55 @@ function initPlayCarousel() {
 }
 
 initPlayCarousel();
+
+let startX,
+  endX,
+  isDragging = false;
+
+function handleSwipe() {
+  if (startX > endX) {
+    changePlayItem(1);
+  } else if (startX < endX) {
+    changePlayItem(-1);
+  }
+}
+
+playCarousel.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
+
+playCarousel.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  endX = e.touches[0].clientX;
+});
+
+playCarousel.addEventListener('touchend', () => {
+  if (!isDragging) return;
+  handleSwipe();
+  isDragging = false;
+});
+
+playCarousel.addEventListener('mousedown', e => {
+  startX = e.clientX;
+  isDragging = true;
+  e.preventDefault();
+});
+
+playCarousel.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  endX = e.clientX;
+});
+
+playCarousel.addEventListener('mouseup', () => {
+  if (!isDragging) return;
+  handleSwipe();
+  isDragging = false;
+});
+
+playCarousel.addEventListener('mouseleave', () => {
+  if (isDragging) {
+    handleSwipe();
+    isDragging = false;
+  }
+});

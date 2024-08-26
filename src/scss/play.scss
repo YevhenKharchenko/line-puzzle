@@ -21,10 +21,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: grab;
 
   @include media(desktop) {
     display: none;
   }
+}
+
+.play-carousel:active {
+  cursor: grabbing;
 }
 
 .play-item {
