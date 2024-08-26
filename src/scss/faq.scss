@@ -55,6 +55,7 @@
   // justify-content: center;
   justify-content: space-between;
   align-items: center;
+  transition: color 0.3s ease-in-out;
 
   @include media(desktop) {
     font-size: 32px;
@@ -96,6 +97,7 @@
 
 .faq-open {
   height: 120px;
+  border-color: #fff;
 
   @include media(desktop) {
     height: 104px;
@@ -119,6 +121,15 @@
 .faq-icon {
   // stroke: #000;
   fill: #000;
+  transition: fill 0.3s ease-in-out;
+}
+
+.faq-top-text:hover {
+  color: #fff;
+}
+
+.faq-top-text:hover .faq-icon {
+  fill: #fff;
 }
 
 .faq-list-item.faq-open .faq-toggle-symbol {
