@@ -108,9 +108,17 @@
 }
 
 .faq-toggle-symbol {
-  display: inline-block;
+  // display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.3s ease;
   margin-left: 8px;
+}
+
+.faq-icon {
+  // stroke: #000;
+  fill: #000;
 }
 
 .faq-list-item.faq-open .faq-toggle-symbol {

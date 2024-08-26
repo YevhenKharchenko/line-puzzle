@@ -65,10 +65,10 @@
   color: #fff;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: $_header_accent_color;
-}
+// .nav-list-link:hover,
+// .nav-list-link:focus {
+//   color: $_header_accent_color;
+// }
 
 .nav-btn {
   @include media(desktop) {

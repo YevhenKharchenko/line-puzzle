@@ -153,8 +153,10 @@ function onBtnClick(e) {
   document.querySelectorAll('.faq-list-item').forEach(item => {
     if (item !== faqContainer) {
       item.classList.remove('faq-open');
-
       item.querySelector('.faq-bottom-text').classList.remove('is-visible');
+      item
+        .querySelector('use')
+        .setAttribute('href', './img/icons/sprite.svg#icon-plus');
     }
   });
 
@@ -163,7 +165,13 @@ function onBtnClick(e) {
 
   if (bottomText.classList.contains('is-visible')) {
     faqContainer.classList.add('faq-open');
+    faqContainer
+      .querySelector('use')
+      .setAttribute('href', './img/icons/sprite.svg#icon-minus');
   } else {
     faqContainer.classList.remove('faq-open');
+    faqContainer
+      .querySelector('use')
+      .setAttribute('href', './img/icons/sprite.svg#icon-plus');
   }
 }
