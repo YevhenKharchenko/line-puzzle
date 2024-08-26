@@ -1,3 +1,7 @@
+.privacy-body {
+  background-color: #aa194e;
+}
+
 .privacy-section {
   padding-top: 80px;
 
@@ -90,9 +94,24 @@
 
 .data-section {
   padding-top: 40px;
+  background-image: url(../img/privacy/paws-mob.png);
+  background-repeat: no-repeat;
+  background-position: bottom 432px center;
+  background-size: 280px 206px;
+
+  @media (min-resolution: 192dpi) {
+    background-image: url(../img/privacy/paws-mob-2x.png);
+  }
 
   @include media(desktop) {
     padding-top: 100px;
+    background-image: url(../img/privacy/paws.png);
+    background-position: bottom 0 center;
+    background-size: 856px 632px;
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../img/privacy/paws-2x.png);
+    }
   }
 }
 
