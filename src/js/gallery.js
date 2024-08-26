@@ -25,3 +25,55 @@ function initCarousel() {
 }
 
 initCarousel();
+
+let startX,
+  endX,
+  isDragging = false;
+
+function handleSwipe() {
+  if (startX > endX) {
+    changeItem(1);
+  } else if (startX < endX) {
+    changeItem(-1);
+  }
+}
+
+carousel.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
+
+carousel.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  endX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', () => {
+  if (!isDragging) return;
+  handleSwipe();
+  isDragging = false;
+});
+
+carousel.addEventListener('mousedown', e => {
+  startX = e.clientX;
+  isDragging = true;
+  e.preventDefault();
+});
+
+carousel.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  endX = e.clientX;
+});
+
+carousel.addEventListener('mouseup', () => {
+  if (!isDragging) return;
+  handleSwipe();
+  isDragging = false;
+});
+
+carousel.addEventListener('mouseleave', () => {
+  if (isDragging) {
+    handleSwipe();
+    isDragging = false;
+  }
+});
