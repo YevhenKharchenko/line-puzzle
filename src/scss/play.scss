@@ -9,6 +9,7 @@
 
 .play-carousel-container {
   margin-top: 20px;
+  overflow: hidden;
 
   @include media(desktop) {
     margin-top: 64px;
@@ -17,10 +18,10 @@
 
 .play-carousel {
   position: relative;
-  overflow: hidden;
   display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
+  transition: transform 3s ease-in-out;
   cursor: grab;
 
   @include media(desktop) {
@@ -33,7 +34,8 @@
 }
 
 .play-item {
-  display: none;
+  flex: 0 0 100%;
+  display: flex;
   background-color: #fff;
   justify-content: center;
   align-items: center;

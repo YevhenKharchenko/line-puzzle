@@ -12,19 +12,18 @@ document.getElementById('playRightArrow').addEventListener('click', () => {
 });
 
 function changePlayItem(direction) {
-  playItems[currentPlayIndex].classList.remove('play-active');
-  playDots[currentPlayIndex % playDots.length].classList.remove('play-active');
-
   currentPlayIndex =
     (currentPlayIndex + direction + playItems.length) % playItems.length;
 
-  playItems[currentPlayIndex].classList.add('play-active');
+  playCarousel.style.transition = 'transform 0.5s ease-in-out';
+  playCarousel.style.transform = `translateX(-${currentPlayIndex * 100}%)`;
+
+  playDots.forEach(dot => dot.classList.remove('play-active'));
   playDots[currentPlayIndex % playDots.length].classList.add('play-active');
 }
 
 function initPlayCarousel() {
-  playItems[currentPlayIndex].classList.add('play-active');
-  playDots[currentPlayIndex % playDots.length].classList.add('play-active');
+  playDots[currentPlayIndex].classList.add('play-active');
 }
 
 initPlayCarousel();
