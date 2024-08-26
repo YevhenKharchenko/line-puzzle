@@ -1,3 +1,5 @@
+import sprite from './img/icons/sprite.svg';
+
 const contextMenu = document.querySelector('.context-menu-backdrop');
 const menuBtn = document.querySelector('.nav-btn');
 const closeContextBtn = document.querySelector('.close-btn');
@@ -154,9 +156,7 @@ function onBtnClick(e) {
     if (item !== faqContainer) {
       item.classList.remove('faq-open');
       item.querySelector('.faq-bottom-text').classList.remove('is-visible');
-      item
-        .querySelector('use')
-        .setAttribute('href', './img/icons/sprite.svg#icon-plus');
+      item.querySelector('use').setAttribute('href', `${sprite}#icon-plus`);
     }
   });
 
@@ -167,11 +167,11 @@ function onBtnClick(e) {
     faqContainer.classList.add('faq-open');
     faqContainer
       .querySelector('use')
-      .setAttribute('href', './img/icons/sprite.svg#icon-minus');
+      .setAttribute('href', `${sprite}#icon-minus`);
   } else {
     faqContainer.classList.remove('faq-open');
     faqContainer
       .querySelector('use')
-      .setAttribute('href', './img/icons/sprite.svg#icon-plus');
+      .setAttribute('href', `${sprite}#icon-plus`);
   }
 }
