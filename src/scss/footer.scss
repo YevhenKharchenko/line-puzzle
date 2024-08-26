@@ -46,10 +46,16 @@
   text-decoration-skip-ink: none;
   text-align: center;
   color: #fff;
+  transition: color 0.3s ease-in-out;
 
   @include media(desktop) {
     font-size: 24px;
   }
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #2aa3c9;
 }
 
 .footer-span {
