@@ -64,6 +64,7 @@
     display: none;
   }
 }
+
 .gplay-btn {
   display: flex;
   height: 83px;
@@ -106,20 +107,42 @@
 }
 
 .bg-puzzles {
+  overflow: hidden;
   background-image: url('../img/hero/puzzle_piece.webp'),
     url('../img/hero/puzzle_piece1.webp');
-  background-position: 16% 53%, 89% 7%;
+  background-position: -50% 53%, 150% 7%;
   background-repeat: no-repeat, no-repeat;
   background-size: 117px 117px, 96px 96px;
+  will-change: background-position;
+  animation: moveBackgroundMobile 2s ease-out forwards;
 
   @include media(desktop) {
     background-image: url('../img/hero/puzzle_piece11.webp'),
       url('../img/hero/puzzle_piece12.webp'),
       url('../img/hero/puzzle_piece13.webp'),
       url('../img/hero/puzzle_piece14.webp');
-    background-position: 8% 20%, 43% 50%, 55% 99%, 92% 0%;
+    background-position: -50% 20%, 150% 50%, 55% 150%, 92% -50%;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 414px 414px, 219px 219px, 306px 306px, 416px 340px;
+    animation: moveBackgroundDesktop 2s ease-out forwards;
+  }
+}
+
+@keyframes moveBackgroundMobile {
+  0% {
+    background-position: -50% 53%, 150% 7%;
+  }
+  100% {
+    background-position: 16% 53%, 89% 7%;
+  }
+}
+
+@keyframes moveBackgroundDesktop {
+  0% {
+    background-position: -50% 20%, 150% 50%, 55% 150%, 92% -50%;
+  }
+  100% {
+    background-position: 8% 20%, 43% 50%, 55% 95%, 92% 1%;
   }
 }
 
@@ -140,4 +163,3 @@
   transform-origin: center;
   will-change: transform;
 }
-
