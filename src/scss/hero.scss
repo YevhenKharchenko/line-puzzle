@@ -1,25 +1,19 @@
-.hero-section {
+.hero-content-wrapper {
   padding-top: 24px;
   padding-bottom: 24px;
-
   @include media(desktop) {
     padding-top: 108px;
     padding-bottom: 74px;
+    display: flex;
+    gap: 252px;
   }
-}
 
-.hero-content-wrapper {
   .hero-img {
     display: none;
 
     @include media(desktop) {
       display: block;
     }
-  }
-
-  @include media(desktop) {
-    display: flex;
-    gap: 252px;
   }
 }
 
@@ -110,7 +104,7 @@
   overflow: hidden;
   background-image: url('../img/hero/puzzle_piece.webp'),
     url('../img/hero/puzzle_piece1.webp');
-  background-position: -50% 53%, 150% 7%;
+  background-position: -50% 56%, 150% 7.5%;
   background-repeat: no-repeat, no-repeat;
   background-size: 117px 117px, 96px 96px;
   will-change: background-position;
@@ -130,10 +124,10 @@
 
 @keyframes moveBackgroundMobile {
   0% {
-    background-position: -50% 53%, 150% 7%;
+    background-position: -50% 56%, 150% 7.5%;
   }
   100% {
-    background-position: 15% 55%, 85% 7%;
+    background-position: 5% 56%, 94% 7.5%;
   }
 }
 
@@ -142,7 +136,8 @@
     background-position: -50% 20%, 150% 50%, 55% 150%, 92% -50%;
   }
   100% {
-    background-position: 10.5% 20%, 43.2% 50%, 55% 95%, 92% 1%;
+    // z-index: -1;
+    background-position: 7.8% 20%, 43.2% 50%, 55% 95%, 92% 1%;
   }
 }
 
