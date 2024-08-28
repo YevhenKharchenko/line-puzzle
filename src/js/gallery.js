@@ -1,46 +1,26 @@
 import Swiper from 'swiper';
-import { Pagination, Navigation } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-// Initialize Swiper
-// document.addEventListener('DOMContentLoaded', function () {
-//   const swiper = new Swiper('.swiper-container', {
-//     modules: [Navigation, Pagination],
-//     loop: false, // Disable infinite loop to match your requirement
-//     navigation: {
-//       nextEl: '#rightArrow',
-//       prevEl: '#leftArrow',
-//     },
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//       renderBullet: function (index, className) {
-//         return `<div class="${className} dot"></div>`;
-//       },
-//     },
-//     slidesPerView: 1,
-//     spaceBetween: 0,
-//     grabCursor: true,
-//     allowTouchMove: true,
-//     breakpoints: {
-//       1440: {
-//         slidesPerView: 1, // Adjust for desktop if needed
-//         spaceBetween: 0,
-//       },
-//     },
-//   });
-// });
+import 'swiper/css/bundle';
 
 const swiper = new Swiper('.swiper-container', {
+  direction: 'horizontal',
   loop: false,
   grabCursor: true,
   slidesPerView: 1,
-  spaceBetween: 24,
+  initialSlide: 0,
+  spaceBetween: 12,
   grabCursor: true,
   allowTouchMove: true,
+  centeredSlides: true,
+  speed: 500,
+  breakpoints: {
+    1440: {
+      spaceBetween: 24,
+    },
+  },
+  navigation: {
+    nextEl: '#rightArrow',
+    prevEl: '#leftArrow',
+  },
 });
 
 const dots = document.querySelectorAll('.dot');
@@ -78,3 +58,32 @@ leftArrow.addEventListener('click', () => {
 rightArrow.addEventListener('click', () => {
   swiper.slideNext();
 });
+
+// Initialize Swiper
+// document.addEventListener('DOMContentLoaded', function () {
+//   const swiper = new Swiper('.swiper-container', {
+//     modules: [Navigation, Pagination],
+//     loop: false, // Disable infinite loop to match your requirement
+//     navigation: {
+//       nextEl: '#rightArrow',
+//       prevEl: '#leftArrow',
+//     },
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//       renderBullet: function (index, className) {
+//         return `<div class="${className} dot"></div>`;
+//       },
+//     },
+//     slidesPerView: 1,
+//     spaceBetween: 0,
+//     grabCursor: true,
+//     allowTouchMove: true,
+//     breakpoints: {
+//       1440: {
+//         slidesPerView: 1, // Adjust for desktop if needed
+//         spaceBetween: 0,
+//       },
+//     },
+//   });
+// });

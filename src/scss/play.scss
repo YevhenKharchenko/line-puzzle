@@ -16,6 +16,23 @@
   }
 }
 
+.play-swiper-container {
+  position: relative;
+  overflow: hidden;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.play-swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .play-carousel {
   position: relative;
   display: flex;
@@ -33,7 +50,7 @@
   cursor: grabbing;
 }
 
-.play-item {
+.play-swiper-slide {
   flex: 0 0 100%;
   display: flex;
   background-color: #fff;
@@ -43,6 +60,9 @@
   height: 410px;
   background-color: transparent;
   overflow: hidden;
+}
+
+.play-item {
 }
 
 .play-img {
@@ -76,6 +96,15 @@
   transform: scale(1.2);
 }
 
+.play-arrow-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.play-arrow-btn:disabled:hover {
+  transform: none;
+}
+
 .play-arrow-icon {
 }
 
@@ -95,7 +124,7 @@
   background-color: #f593bc;
 }
 
-.play-dot.play-active {
+.play-dot.active {
   // transform: scale(1.5);
   background-color: #fff;
   width: 26px;
