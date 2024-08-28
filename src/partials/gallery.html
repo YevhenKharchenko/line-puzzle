@@ -1,9 +1,9 @@
 <section class="gallery-section" id="gallery">
   <div class="container gallery-container">
     <h1 class="section-title">Gallery</h1>
-    <div class="carousel-container">
-      <ul class="gallery-carousel">
-        <li class="gallery-item">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
           <picture>
             <source
               srcset="
@@ -19,8 +19,8 @@
               height="157"
             />
           </picture>
-        </li>
-        <li class="gallery-item">
+        </div>
+        <div class="swiper-slide">
           <picture>
             <source
               srcset="
@@ -36,8 +36,8 @@
               height="157"
             />
           </picture>
-        </li>
-        <li class="gallery-item">
+        </div>
+        <div class="swiper-slide">
           <picture>
             <source
               srcset="
@@ -53,31 +53,21 @@
               height="157"
             />
           </picture>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
     <div class="controls">
-      <button
-        class="arrow-btn"
-        type="button"
-        id="leftArrow"
-        aria-label="Previous slide"
-      >
+      <button class="arrow-btn" id="leftArrow" aria-label="Previous slide">
         <svg class="arrow-icon" width="58" height="30">
           <use href="./img/icons/sprite.svg#icon-left-arrow"></use>
         </svg>
       </button>
       <div class="dots">
-        <div class="dot"></div>
+        <div class="dot active"></div>
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <button
-        class="arrow-btn"
-        type="button"
-        id="rightArrow"
-        aria-label="Next slide"
-      >
+      <button class="arrow-btn" id="rightArrow" aria-label="Next slide">
         <svg class="arrow-icon" width="58" height="30">
           <use href="./img/icons/sprite.svg#icon-right-arrow"></use>
         </svg>

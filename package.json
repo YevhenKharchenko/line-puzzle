@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "modern-normalize": "^3.0.0",
+    "swiper": "^11.1.10",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }
