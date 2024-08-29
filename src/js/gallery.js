@@ -1,79 +1,59 @@
-let currentIndex = 0;
-const items = document.querySelectorAll('.gallery-item');
+import Swiper from 'swiper';
+import 'swiper/css/bundle';
+
+const gallerySwiper = new Swiper('.gallery-swiper-container', {
+  direction: 'horizontal',
+  loop: false,
+  grabCursor: true,
+  slidesPerView: 1,
+  initialSlide: 0,
+  spaceBetween: 12,
+  grabCursor: true,
+  allowTouchMove: true,
+  speed: 500,
+  breakpoints: {
+    1440: {
+      spaceBetween: 24,
+    },
+  },
+  on: {
+    init: () => {
+      document.querySelector('.gallery-swiper-container').classList.add('show');
+    },
+    slideChange: () => {
+      updateDots(gallerySwiper.realIndex);
+      updateArrows();
+    },
+  },
+});
+
 const dots = document.querySelectorAll('.dot');
-const carousel = document.querySelector('.gallery-carousel');
+const leftArrow = document.getElementById('leftArrow');
+const rightArrow = document.getElementById('rightArrow');
 
-document.getElementById('leftArrow').addEventListener('click', () => {
-  changeItem(-1);
-});
-
-document.getElementById('rightArrow').addEventListener('click', () => {
-  changeItem(1);
-});
-
-function changeItem(direction) {
-  currentIndex = (currentIndex + direction + items.length) % items.length;
-
-  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentIndex].classList.add('active');
+function updateDots(index) {
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
 }
 
-function initCarousel() {
-  dots[currentIndex].classList.add('active');
+function updateArrows() {
+  leftArrow.disabled = gallerySwiper.isBeginning;
+  rightArrow.disabled = gallerySwiper.isEnd;
 }
 
-initCarousel();
+updateArrows();
 
-let startX,
-  endX,
-  isDragging = false;
-
-function handleSwipe() {
-  if (startX > endX) {
-    changeItem(1);
-  } else if (startX < endX) {
-    changeItem(-1);
-  }
-}
-
-carousel.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-  isDragging = true;
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    gallerySwiper.slideTo(index);
+  });
 });
 
-carousel.addEventListener('touchmove', e => {
-  if (!isDragging) return;
-  endX = e.touches[0].clientX;
+leftArrow.addEventListener('click', () => {
+  gallerySwiper.slidePrev();
 });
 
-carousel.addEventListener('touchend', () => {
-  if (!isDragging) return;
-  handleSwipe();
-  isDragging = false;
-});
-
-carousel.addEventListener('mousedown', e => {
-  startX = e.clientX;
-  isDragging = true;
-  e.preventDefault();
-});
-
-carousel.addEventListener('mousemove', e => {
-  if (!isDragging) return;
-  endX = e.clientX;
-});
-
-carousel.addEventListener('mouseup', () => {
-  if (!isDragging) return;
-  handleSwipe();
-  isDragging = false;
-});
-
-carousel.addEventListener('mouseleave', () => {
-  if (isDragging) {
-    handleSwipe();
-    isDragging = false;
-  }
+rightArrow.addEventListener('click', () => {
+  gallerySwiper.slideNext();
 });

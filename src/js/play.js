@@ -1,81 +1,69 @@
-const playCarousel = document.querySelector('.play-carousel');
-const playItems = document.querySelectorAll('.play-item');
+import Swiper from 'swiper';
+import 'swiper/css/bundle';
+
+const playSwiper = new Swiper('.play-swiper-container', {
+  direction: 'horizontal',
+  loop: false,
+  grabCursor: true,
+  slidesPerView: 1,
+  initialSlide: 0,
+  spaceBetween: 12,
+  grabCursor: true,
+  allowTouchMove: true,
+  speed: 500,
+  on: {
+    init: () => {
+      document.querySelector('.play-swiper-container').classList.add('show');
+    },
+    slideChange: () => {
+      updatePlayDots(playSwiper.realIndex);
+      updatePlayArrows();
+    },
+  },
+});
+
+const playLeftArrow = document.getElementById('playLeftArrow');
+const playRightArrow = document.getElementById('playRightArrow');
 const playDots = document.querySelectorAll('.play-dot');
-let currentPlayIndex = 0;
 
-document.getElementById('playLeftArrow').addEventListener('click', () => {
-  changePlayItem(-1);
-});
+function updatePlayDots(index) {
+  let startIndex;
 
-document.getElementById('playRightArrow').addEventListener('click', () => {
-  changePlayItem(1);
-});
-
-function changePlayItem(direction) {
-  currentPlayIndex =
-    (currentPlayIndex + direction + playItems.length) % playItems.length;
-
-  playCarousel.style.transition = 'transform 0.5s ease-in-out';
-  playCarousel.style.transform = `translateX(-${currentPlayIndex * 100}%)`;
-
-  playDots.forEach(dot => dot.classList.remove('play-active'));
-  playDots[currentPlayIndex % playDots.length].classList.add('play-active');
-}
-
-function initPlayCarousel() {
-  playDots[currentPlayIndex].classList.add('play-active');
-}
-
-initPlayCarousel();
-
-let startX,
-  endX,
-  isDragging = false;
-
-function handleSwipe() {
-  if (startX > endX) {
-    changePlayItem(1);
-  } else if (startX < endX) {
-    changePlayItem(-1);
+  if (index === 0) {
+    startIndex = 0;
+  } else if (index === playSwiper.slides.length - 1) {
+    startIndex = index - 2;
+  } else {
+    startIndex = index - 1;
   }
+
+  playDots.forEach((dot, i) => {
+    const slideIndex = startIndex + i;
+    dot.classList.toggle('active', slideIndex === index);
+    dot.style.display = 'inline-block';
+    dot.dataset.slideIndex = slideIndex;
+  });
 }
 
-playCarousel.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-  isDragging = true;
+function updatePlayArrows() {
+  playLeftArrow.disabled = playSwiper.isBeginning;
+  playRightArrow.disabled = playSwiper.isEnd;
+}
+
+updatePlayArrows();
+updatePlayDots(playSwiper.realIndex);
+
+playDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    const slideIndex = parseInt(dot.dataset.slideIndex, 10);
+    playSwiper.slideTo(slideIndex);
+  });
 });
 
-playCarousel.addEventListener('touchmove', e => {
-  if (!isDragging) return;
-  endX = e.touches[0].clientX;
+playLeftArrow.addEventListener('click', () => {
+  playSwiper.slidePrev();
 });
 
-playCarousel.addEventListener('touchend', () => {
-  if (!isDragging) return;
-  handleSwipe();
-  isDragging = false;
-});
-
-playCarousel.addEventListener('mousedown', e => {
-  startX = e.clientX;
-  isDragging = true;
-  e.preventDefault();
-});
-
-playCarousel.addEventListener('mousemove', e => {
-  if (!isDragging) return;
-  endX = e.clientX;
-});
-
-playCarousel.addEventListener('mouseup', () => {
-  if (!isDragging) return;
-  handleSwipe();
-  isDragging = false;
-});
-
-playCarousel.addEventListener('mouseleave', () => {
-  if (isDragging) {
-    handleSwipe();
-    isDragging = false;
-  }
+playRightArrow.addEventListener('click', () => {
+  playSwiper.slideNext();
 });

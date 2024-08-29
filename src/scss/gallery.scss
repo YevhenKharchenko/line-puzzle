@@ -28,7 +28,7 @@
   }
 }
 
-.carousel-container {
+.gallery-swiper-container {
   position: relative;
   overflow: hidden;
   margin-top: 20px;
@@ -37,26 +37,19 @@
   margin-left: auto;
   margin-right: auto;
 
+  display: none;
+
   @include media(desktop) {
     margin-top: 75px;
     width: 1076px;
   }
 }
 
-.gallery-carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-  border-radius: 32px;
-  cursor: grab;
+.gallery-swiper-container.show {
+  display: block;
 }
 
-.gallery-carousel:active {
-  cursor: grabbing;
-}
-
-.gallery-item {
-  flex: 0 0 100%;
+.gallery-slide {
   display: flex;
   background-color: #fff;
   justify-content: center;
@@ -70,6 +63,7 @@
     border: 3px solid #890e3a;
     width: 1076px;
     height: 601px;
+    padding: 8px 17px;
   }
 }
 
@@ -82,10 +76,6 @@
     width: 1037px;
     height: 579px;
   }
-}
-
-.gallery-item.active {
-  display: flex;
 }
 
 .controls {
@@ -103,13 +93,28 @@
 
 .arrow-btn {
   transition: transform 0.3s ease-in-out;
-}
+  background: none;
+  border: none;
+  cursor: pointer;
 
-.arrow-btn:hover {
-  transform: scale(1.2);
+  &hover {
+    transform: scale(1.2);
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      transform: none;
+    }
+  }
 }
 
 .arrow-icon {
+  width: 58px;
+  height: 30px;
+
   @include media(desktop) {
     width: 86px;
     height: 42px;
@@ -133,6 +138,7 @@
   transition: transform 0.5s, background-color 0.5s, width 0.5s, height 0.5s;
   border-radius: 100%;
   background-color: #f593bc;
+  cursor: pointer;
 
   @include media(desktop) {
     width: 20px;
