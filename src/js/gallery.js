@@ -1,6 +1,10 @@
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
 
+const dots = document.querySelectorAll('.dot');
+const leftArrow = document.getElementById('leftArrow');
+const rightArrow = document.getElementById('rightArrow');
+
 const gallerySwiper = new Swiper('.gallery-swiper-container', {
   direction: 'horizontal',
   loop: false,
@@ -26,10 +30,6 @@ const gallerySwiper = new Swiper('.gallery-swiper-container', {
     },
   },
 });
-
-const dots = document.querySelectorAll('.dot');
-const leftArrow = document.getElementById('leftArrow');
-const rightArrow = document.getElementById('rightArrow');
 
 function updateDots(index) {
   dots.forEach((dot, i) => {

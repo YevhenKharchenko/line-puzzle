@@ -36,8 +36,7 @@
   border-radius: 32px;
   margin-left: auto;
   margin-right: auto;
-
-  display: none;
+  visibility: hidden;
 
   @include media(desktop) {
     margin-top: 75px;
@@ -46,7 +45,7 @@
 }
 
 .gallery-swiper-container.show {
-  display: block;
+  visibility: visible;
 }
 
 .gallery-slide {
@@ -97,7 +96,7 @@
   border: none;
   cursor: pointer;
 
-  &hover {
+  &:hover {
     transform: scale(1.2);
   }
 
