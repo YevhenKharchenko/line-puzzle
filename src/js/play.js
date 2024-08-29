@@ -1,6 +1,10 @@
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
 
+const playLeftArrow = document.getElementById('playLeftArrow');
+const playRightArrow = document.getElementById('playRightArrow');
+const playDots = document.querySelectorAll('.play-dot');
+
 const playSwiper = new Swiper('.play-swiper-container', {
   direction: 'horizontal',
   loop: false,
@@ -21,10 +25,6 @@ const playSwiper = new Swiper('.play-swiper-container', {
     },
   },
 });
-
-const playLeftArrow = document.getElementById('playLeftArrow');
-const playRightArrow = document.getElementById('playRightArrow');
-const playDots = document.querySelectorAll('.play-dot');
 
 function updatePlayDots(index) {
   let startIndex;
