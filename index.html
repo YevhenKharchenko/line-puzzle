@@ -11,8 +11,10 @@
     <title>Line Puzzle</title>
     
     <script type="module" crossorigin src="/line-puzzle/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/line-puzzle/assets/header-d87a596d.js">
-    <link rel="stylesheet" href="/line-puzzle/assets/header-298e732c.css">
+    <link rel="modulepreload" crossorigin href="/line-puzzle/assets/header-e73c3841.js">
+    <link rel="modulepreload" crossorigin href="/line-puzzle/assets/vendor-f1409622.js">
+    <link rel="stylesheet" href="/line-puzzle/assets/header-ffd595fd.css">
+    <link rel="stylesheet" href="/line-puzzle/assets/vendor-b51df72b.css">
   </head>
   <body>
     <header class="header">
@@ -239,120 +241,122 @@
   <div class="container">
     <h1 class="section-title">How to Play</h1>
     <div class="play-carousel-container">
-      <ul class="play-carousel">
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-1-4e525862.png 1x, /line-puzzle/assets/puzzle-1@2x-b22be3c8.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-1-4e525862.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-2-9b6ffc68.png 1x, /line-puzzle/assets/puzzle-2@2x-9ab3c27f.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-2-9b6ffc68.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-3-99087157.png 1x, /line-puzzle/assets/puzzle-3@2x-cec66f24.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-3-99087157.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-4-9a7fc9d2.png 1x, /line-puzzle/assets/puzzle-4@2x-423b0948.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-4-9a7fc9d2.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-5-4ff898e2.png 1x, /line-puzzle/assets/puzzle-5@2x-5cc9b5ac.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-5-4ff898e2.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-6-e699902b.png 1x, /line-puzzle/assets/puzzle-6@2x-e6e57e4b.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-6-e699902b.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-7-77925f41.png 1x, /line-puzzle/assets/puzzle-7@2x-3a6abe94.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-7-77925f41.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-        <li class="play-item">
-          <picture>
-            <source
-              srcset="/line-puzzle/assets/puzzle-8-98deb88f.png 1x, /line-puzzle/assets/puzzle-8@2x-02bd6e68.png 2x"
-            />
-            <img
-              class="play-img"
-              src="/line-puzzle/assets/puzzle-8-98deb88f.png"
-              alt="Puzzle"
-              width="280"
-              height="280"
-            />
-          </picture>
-        </li>
-      </ul>
+      <div class="play-swiper-container">
+        <ul class="swiper-wrapper play-swiper-wrapper">
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-1-4e525862.png 1x, /line-puzzle/assets/puzzle-1@2x-b22be3c8.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-1-4e525862.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-2-9b6ffc68.png 1x, /line-puzzle/assets/puzzle-2@2x-9ab3c27f.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-2-9b6ffc68.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-3-99087157.png 1x, /line-puzzle/assets/puzzle-3@2x-cec66f24.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-3-99087157.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-4-9a7fc9d2.png 1x, /line-puzzle/assets/puzzle-4@2x-423b0948.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-4-9a7fc9d2.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-5-4ff898e2.png 1x, /line-puzzle/assets/puzzle-5@2x-5cc9b5ac.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-5-4ff898e2.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-6-e699902b.png 1x, /line-puzzle/assets/puzzle-6@2x-e6e57e4b.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-6-e699902b.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-7-77925f41.png 1x, /line-puzzle/assets/puzzle-7@2x-3a6abe94.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-7-77925f41.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide play-item">
+            <picture>
+              <source
+                srcset="/line-puzzle/assets/puzzle-8-98deb88f.png 1x, /line-puzzle/assets/puzzle-8@2x-02bd6e68.png 2x"
+              />
+              <img
+                class="play-img"
+                src="/line-puzzle/assets/puzzle-8-98deb88f.png"
+                alt="Puzzle"
+                width="280"
+                height="280"
+              />
+            </picture>
+          </li>
+        </ul>
+      </div>
       <div class="play-controls">
         <button
           class="play-arrow-btn"
@@ -365,7 +369,7 @@
           </svg>
         </button>
         <div class="play-dots">
-          <div class="play-dot"></div>
+          <div class="play-dot active"></div>
           <div class="play-dot"></div>
           <div class="play-dot"></div>
         </div>
@@ -502,9 +506,9 @@
       <section class="gallery-section" id="gallery">
   <div class="container gallery-container">
     <h1 class="section-title">Gallery</h1>
-    <div class="carousel-container">
-      <ul class="gallery-carousel">
-        <li class="gallery-item">
+    <div class="gallery-swiper-container">
+      <ul class="swiper-wrapper gallery-swiper-wrapper">
+        <li class="swiper-slide gallery-slide">
           <picture>
             <source
               srcset="/line-puzzle/assets/gallery-1-23e86656.png 1x, /line-puzzle/assets/gallery-1-2x-752b06c1.png 2x"
@@ -518,7 +522,7 @@
             />
           </picture>
         </li>
-        <li class="gallery-item">
+        <li class="swiper-slide gallery-slide">
           <picture>
             <source
               srcset="/line-puzzle/assets/gallery-2-779b2954.png 1x, /line-puzzle/assets/gallery-2-2x-2790e58f.png 2x"
@@ -532,7 +536,7 @@
             />
           </picture>
         </li>
-        <li class="gallery-item">
+        <li class="swiper-slide gallery-slide">
           <picture>
             <source
               srcset="/line-puzzle/assets/gallery-3-0a3385e4.png 1x, /line-puzzle/assets/gallery-3-2x-95db498c.png 2x"
@@ -549,27 +553,17 @@
       </ul>
     </div>
     <div class="controls">
-      <button
-        class="arrow-btn"
-        type="button"
-        id="leftArrow"
-        aria-label="Previous slide"
-      >
+      <button class="arrow-btn" id="leftArrow" aria-label="Previous slide">
         <svg class="arrow-icon" width="58" height="30">
           <use href="/line-puzzle/assets/sprite-68039290.svg#icon-left-arrow"></use>
         </svg>
       </button>
       <div class="dots">
-        <div class="dot"></div>
+        <div class="dot active"></div>
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
-      <button
-        class="arrow-btn"
-        type="button"
-        id="rightArrow"
-        aria-label="Next slide"
-      >
+      <button class="arrow-btn" id="rightArrow" aria-label="Next slide">
         <svg class="arrow-icon" width="58" height="30">
           <use href="/line-puzzle/assets/sprite-68039290.svg#icon-right-arrow"></use>
         </svg>
