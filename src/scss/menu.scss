@@ -20,7 +20,6 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  // display: none;
   z-index: 10;
   background-image: url(../img/header/paws.png);
   background-repeat: no-repeat;
@@ -30,9 +29,6 @@
   @media (min-resolution: 192dpi) {
     background-image: url(../img/header/paws-2x.png);
   }
-}
-
-.menu-icon {
 }
 
 .context-img {
@@ -53,17 +49,11 @@
   stroke: #000;
 }
 
-.context-nav {
-}
-
 .context-nav-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
   text-align: center;
-}
-
-.context-list-item {
 }
 
 .context-list-link {
@@ -73,11 +63,11 @@
   text-align: center;
   color: #000;
   transition: color 0.3s ease-in-out;
-}
 
-.context-list-link:hover,
-.context-list-link:focus {
-  color: #4dc4e9;
+  &:hover,
+  &:focus {
+    color: #4dc4e9;
+  }
 }
 
 .context-menu-btn {

@@ -23,9 +23,15 @@
   margin-left: auto;
   margin-right: auto;
 
+  visibility: hidden;
+
   @include media(desktop) {
     display: none;
   }
+}
+
+.play-swiper-container.show {
+  visibility: visible;
 }
 
 .play-swiper-wrapper {
@@ -33,27 +39,8 @@
   align-items: center;
 }
 
-.play-carousel {
-  position: relative;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
-  cursor: grab;
-
-  @include media(desktop) {
-    display: none;
-  }
-}
-
-.play-carousel:active {
-  cursor: grabbing;
-}
-
 .play-swiper-slide {
-  flex: 0 0 100%;
   display: flex;
-  background-color: #fff;
   justify-content: center;
   align-items: center;
   width: 280px;
@@ -62,18 +49,9 @@
   overflow: hidden;
 }
 
-.play-item {
-}
-
 .play-img {
-  width: 280px;
-  height: 280px;
   width: auto;
   height: auto;
-}
-
-.play-item.play-active {
-  display: flex;
 }
 
 .play-controls {
@@ -90,22 +68,19 @@
 
 .play-arrow-btn {
   transition: transform 0.3s ease-in-out;
-}
 
-.play-arrow-btn:hover {
-  transform: scale(1.2);
-}
+  &:hover {
+    transform: scale(1.2);
+  }
 
-.play-arrow-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
 
-.play-arrow-btn:disabled:hover {
-  transform: none;
-}
-
-.play-arrow-icon {
+    &:hover {
+      transform: none;
+    }
+  }
 }
 
 .play-dots {
@@ -119,13 +94,11 @@
   width: 19px;
   height: 18px;
   transition: transform 0.3s, background-color 0.3s, width 0.3s, height 0.3s;
-  // cursor: pointer;
   border-radius: 100%;
   background-color: #f593bc;
 }
 
 .play-dot.active {
-  // transform: scale(1.5);
   background-color: #fff;
   width: 26px;
   height: 26px;

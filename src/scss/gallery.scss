@@ -28,7 +28,7 @@
   }
 }
 
-.swiper-container {
+.gallery-swiper-container {
   position: relative;
   overflow: hidden;
   margin-top: 20px;
@@ -37,18 +37,16 @@
   margin-left: auto;
   margin-right: auto;
 
+  display: none;
+
   @include media(desktop) {
     margin-top: 75px;
     width: 1076px;
   }
 }
 
-.swiper-wrapper {
-  @include media(desktop) {
-  }
-}
-
-.swiper-slide {
+.gallery-swiper-container.show {
+  display: block;
 }
 
 .gallery-slide {
@@ -99,12 +97,18 @@
   border: none;
   cursor: pointer;
 
-  @include media(desktop) {
+  &hover {
+    transform: scale(1.2);
   }
-}
 
-.arrow-btn:hover {
-  transform: scale(1.2);
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      transform: none;
+    }
+  }
 }
 
 .arrow-icon {
@@ -151,13 +155,4 @@
     width: 30px;
     height: 30px;
   }
-}
-
-.arrow-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.arrow-btn:disabled:hover {
-  transform: none;
 }

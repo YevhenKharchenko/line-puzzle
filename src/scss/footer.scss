@@ -51,11 +51,11 @@
   @include media(desktop) {
     font-size: 24px;
   }
-}
 
-.footer-link:hover,
-.footer-link:focus {
-  color: #4dc4e9;
+  &:hover,
+  &:focus {
+    color: #4dc4e9;
+  }
 }
 
 .footer-span {

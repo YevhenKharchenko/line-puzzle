@@ -10,11 +10,15 @@ const playSwiper = new Swiper('.play-swiper-container', {
   spaceBetween: 12,
   grabCursor: true,
   allowTouchMove: true,
-  centeredSlides: true,
   speed: 500,
-  navigation: {
-    nextEl: '#playRightArrow',
-    prevEl: '#playLeftArrow',
+  on: {
+    init: () => {
+      document.querySelector('.play-swiper-container').classList.add('show');
+    },
+    slideChange: () => {
+      updatePlayDots(playSwiper.realIndex);
+      updatePlayArrows();
+    },
   },
 });
 
@@ -45,11 +49,6 @@ function updatePlayArrows() {
   playLeftArrow.disabled = playSwiper.isBeginning;
   playRightArrow.disabled = playSwiper.isEnd;
 }
-
-playSwiper.on('slideChange', function () {
-  updatePlayDots(playSwiper.realIndex);
-  updatePlayArrows();
-});
 
 updatePlayArrows();
 updatePlayDots(playSwiper.realIndex);

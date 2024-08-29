@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
 
-const swiper = new Swiper('.swiper-container', {
+const gallerySwiper = new Swiper('.gallery-swiper-container', {
   direction: 'horizontal',
   loop: false,
   grabCursor: true,
@@ -10,16 +10,20 @@ const swiper = new Swiper('.swiper-container', {
   spaceBetween: 12,
   grabCursor: true,
   allowTouchMove: true,
-  centeredSlides: true,
   speed: 500,
   breakpoints: {
     1440: {
       spaceBetween: 24,
     },
   },
-  navigation: {
-    nextEl: '#rightArrow',
-    prevEl: '#leftArrow',
+  on: {
+    init: () => {
+      document.querySelector('.gallery-swiper-container').classList.add('show');
+    },
+    slideChange: () => {
+      updateDots(gallerySwiper.realIndex);
+      updateArrows();
+    },
   },
 });
 
@@ -34,56 +38,22 @@ function updateDots(index) {
 }
 
 function updateArrows() {
-  leftArrow.disabled = swiper.isBeginning;
-  rightArrow.disabled = swiper.isEnd;
+  leftArrow.disabled = gallerySwiper.isBeginning;
+  rightArrow.disabled = gallerySwiper.isEnd;
 }
-
-swiper.on('slideChange', function () {
-  updateDots(swiper.realIndex);
-  updateArrows();
-});
 
 updateArrows();
 
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    swiper.slideTo(index);
+    gallerySwiper.slideTo(index);
   });
 });
 
 leftArrow.addEventListener('click', () => {
-  swiper.slidePrev();
+  gallerySwiper.slidePrev();
 });
 
 rightArrow.addEventListener('click', () => {
-  swiper.slideNext();
+  gallerySwiper.slideNext();
 });
-
-// Initialize Swiper
-// document.addEventListener('DOMContentLoaded', function () {
-//   const swiper = new Swiper('.swiper-container', {
-//     modules: [Navigation, Pagination],
-//     loop: false, // Disable infinite loop to match your requirement
-//     navigation: {
-//       nextEl: '#rightArrow',
-//       prevEl: '#leftArrow',
-//     },
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//       renderBullet: function (index, className) {
-//         return `<div class="${className} dot"></div>`;
-//       },
-//     },
-//     slidesPerView: 1,
-//     spaceBetween: 0,
-//     grabCursor: true,
-//     allowTouchMove: true,
-//     breakpoints: {
-//       1440: {
-//         slidesPerView: 1, // Adjust for desktop if needed
-//         spaceBetween: 0,
-//       },
-//     },
-//   });
-// });
